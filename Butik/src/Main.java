@@ -6,13 +6,10 @@ public class Main {
         Butik butik = new Butik();
         int byttepenge=0;
         try {
-            byttepenge=butik.køb(150, 786);
+            byttepenge=butik.køb(150, 100);
         }
-        catch(InvalidAttributeValueException e){
+        catch(InvalidAttributeValueException | InvalidApplicationException e){
             System.out.println(e.getMessage());
-        }
-        catch(InvalidApplicationException e2){
-            System.out.println(e2.getMessage());
         }
         System.out.println(butik.byttepenge(byttepenge));
     }
